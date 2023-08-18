@@ -1,0 +1,122 @@
+body {
+	margin: 0px ;
+	padding: 0px ;
+	font-family: 'Courier New', Courier, monospace;
+}
+
+.header {
+	background-color: lightcoral;
+}
+
+.header nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px 320px;
+}
+
+.buttons {
+	display: block;	
+}
+  
+.buttons button {
+	width: 110px;
+	padding: 10px 20px;
+	background-color: #f0f0f0;
+	color: lightcoral;
+	font-weight: bold;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	justify-content: end;
+}
+  
+.buttons button:hover {
+	background-color: rgb(233, 95, 95);
+	color: #fff;
+	box-shadow: 0px 0px 2px 2px rgb(234, 157, 157);
+}
+
+.logo {
+	width: 50px;
+	height: 50px;
+	object-fit: cover;
+	border-radius: 100%;
+  }
+
+main {
+	background-color: #f0f0f0;
+	padding: 20px 320px;
+}
+
+section {
+	margin-bottom: 50px;
+}
+
+.tb-familia img {
+	object-fit: cover;
+	margin-top: 20px;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+form label {
+    display: block;
+    margin-top: 10px;
+	padding: 2px 20px;
+}
+
+form input, form select, form textarea {
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 5px;
+}
+
+form video, form audio {
+    display: block;
+    margin-top: 10px;
+    width: 100%;
+}
+
+form #enviar {
+	padding: 10px 20px;
+	width: 500px;
+	background-color: lightcoral;
+	color: #fff;
+	font-weight: bold;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+form #enviar:hover {
+	background-color: rgb(233, 95, 95);
+	color: #fff;
+	box-shadow: 0px 0px 2px 2px #fff
+}
+
+footer {
+	background-color: #f0f0f0;
+	padding: 20px 320px;
+	text-align: center;
+	font-size: 11px;
+}
+
+footer a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer p {
+    margin: 5px 0;
+}
+footer p i {
+	color: coral;
+}
