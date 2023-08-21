@@ -1,40 +1,22 @@
-body {
-	margin: 0px ;
-	padding: 0px ;
+* {
+	margin: auto ;
 	font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+	background-color: #f0f0f0;
 }
 
 .header {
 	background-color: lightcoral;
+	height: auto;
+	padding-bottom: 10px;
 }
 
-.header nav {
+.nav-bar {
+	width: 65%;
 	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 20px 320px;
-}
-
-.buttons {
-	display: block;	
-}
-  
-.buttons button {
-	width: 110px;
-	padding: 10px 20px;
-	background-color: #f0f0f0;
-	color: lightcoral;
-	font-weight: bold;
-	border: none;
-	border-radius: 5px;
-	cursor: pointer;
-	justify-content: end;
-}
-  
-.buttons button:hover {
-	background-color: rgb(233, 95, 95);
-	color: #fff;
-	box-shadow: 0px 0px 2px 2px rgb(234, 157, 157);
+    flex-direction: column;
 }
 
 .logo {
@@ -42,15 +24,72 @@ body {
 	height: 50px;
 	object-fit: cover;
 	border-radius: 100%;
-  }
+	padding: 10px;
+}
+
+.buttons {
+	display: flex;
+	flex-direction: row	;
+	justify-content: space-around;
+	align-items: center;
+	gap: 10px;
+}
+  
+.buttons button {
+	width: 120px;
+	height: 50px;
+	padding: 10px 20px;
+	background-color: #f0f0f0;
+	color: lightcoral;
+	font-weight: bold;
+	border: none;
+	border-radius: 100px;
+	cursor: pointer;
+	justify-content: end;
+}
+
+.buttons:hover :not(:hover) {
+	opacity: 0.8;
+	transition: 0.5s
+}
+.buttons button:hover {
+	background-color: rgb(233, 95, 95);
+	color: #fff;
+	transition: 0.5s;
+	scale: 1.1;
+}
 
 main {
 	background-color: #f0f0f0;
-	padding: 20px 320px;
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+	color: rgb(80, 80, 80);
 }
 
 section {
-	margin-bottom: 50px;
+	padding-top: 10px;
+	padding-bottom: 40px;
+	width: 80%;
+}
+
+.sobre-mim .sub-sm {
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+	padding: 20px;
+}
+
+h1.titulo-destaque{
+	font-size: 2em
+}
+
+div + h6 {
+	color: black;
+} 
+
+img {
+	border-radius: 30px;
 }
 
 .tb-familia img {
@@ -58,45 +97,7 @@ section {
 	margin-top: 20px;
 }
 
-form {
-    max-width: 500px;
-    margin: 0 auto;
-}
-
-form label {
-    display: block;
-    margin-top: 10px;
-	padding: 2px 20px;
-}
-
-form input, form select, form textarea {
-    margin-bottom: 10px;
-    width: 100%;
-    padding: 5px;
-}
-
-form video, form audio {
-    display: block;
-    margin-top: 10px;
-    width: 100%;
-}
-
-form #enviar {
-	padding: 10px 20px;
-	width: 500px;
-	background-color: lightcoral;
-	color: #fff;
-	font-weight: bold;
-	border: none;
-	border-radius: 5px;
-	cursor: pointer;
-}
-
-form #enviar:hover {
-	background-color: rgb(233, 95, 95);
-	color: #fff;
-	box-shadow: 0px 0px 2px 2px #fff
-}
+/*aq dps*/
 
 footer {
 	background-color: #f0f0f0;
@@ -119,4 +120,109 @@ footer p {
 }
 footer p i {
 	color: coral;
+}
+
+/* FORMULÁRIO */
+form {
+	max-width: 100%;
+	margin: 20px;
+	padding: 20px;
+	border: 1px solid lightcoral;
+	border-radius: 5px;
+	background-color: #fff;
+}
+
+label {
+	font-weight: bold;
+}
+
+input[type="text"], input[type="number"], input[type="email"], textarea {
+	width: 97%;
+	padding: 8px;
+	margin-bottom: 10px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+input[type="range"] {
+	width: 100%;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+	margin-right: 5px;
+}
+
+select {
+	width: 100%;
+	padding: 8px;
+	margin-bottom: 10px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+textarea {
+	resize: vertical;
+}
+
+input[type="submit"]:active {
+	background-color: #333;
+	color: #fff;
+}
+
+input[type="text"][required], input[type="email"][required] {
+	border-color: rgb(233, 95, 95);
+}
+
+input[type="radio"]:checked + label, input[type="checkbox"]:checked + label {
+	font-weight: bold;
+	color: rgb(233, 95, 95);
+}
+
+input:disabled {
+	background-color: #f1f1f1;
+	color: #888;
+	border: 1px solid #ddd;
+}
+
+label::before, label::after {
+	content: "♥";
+	color: lightcoral;
+	margin-right: 5px;
+}
+
+input[type="text"]:hover, input[type="number"]:hover, input[type="email"]:hover, textarea:hover, select:hover {
+	border-color: rgb(233, 95, 95);
+}
+
+input[type="text"]:focus, input[type="number"]:focus, input[type="email"]:focus, textarea:focus, select:focus {
+	border-color: rgb(233, 95, 95);
+	box-shadow: 0 0 5px rgba(255, 99, 71, 0.5);
+}
+
+input[type="radio"]:not(:checked) + label::before, input[type="checkbox"]:not(:checked) + label::before {
+	content: "";
+}
+
+input[type="color"] {
+	color: #f6516f;
+}
+
+#enviar {
+	padding: 10px 20px;
+	width: 100%;
+	background-color: lightcoral;
+	color: #fff;
+	font-weight: bold;
+	border: none;
+	border-radius: 100px;
+	cursor: pointer;
+	transition: none;
+}
+
+#enviar:hover {
+	background-color: rgb(233, 95, 95);
+	color: #fff;
+	transition: 0.5s;
+	border-radius: 25px;
 }
